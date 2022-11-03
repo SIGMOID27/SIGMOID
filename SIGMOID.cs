@@ -4,5 +4,6 @@ namespace SIGMOID
 {
 	public class SIGMOID : Mod
 	{
+		
 	}
 }
