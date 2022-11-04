@@ -1,24 +1,24 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using SIGMOID.Projectiles;
 
 namespace SIGMOID.Items
 {
-	public class SIGMOID : ModItem
+	public class SIGMOIDSWORD : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			// DisplayName.SetDefault("SIGMOID"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
-			Tooltip.SetDefault("sigmoid sword");
+			Tooltip.SetDefault("it is swag");
 		}
 
 		public override void SetDefaults()
 		{
-			Item.damage = 10000;
+			Item.damage = 1000;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 1000;
 			Item.height = 1000;
-			Item.useTime = 1;
+			Item.useTime = 4;
 			Item.useAnimation = 1;
 			Item.useStyle = 1;
 			Item.knockBack = 0;
@@ -26,12 +26,13 @@ namespace SIGMOID.Items
 			Item.rare = 5;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
-		}
+            Item.shoot = ModContent.ProjectileType<SIGMOIDBEAM>();
+        }
 
 		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ItemID.DirtBlock, 10);
+			recipe.AddIngredient(ItemID.DirtBlock, 1);
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.Register();
 		}
