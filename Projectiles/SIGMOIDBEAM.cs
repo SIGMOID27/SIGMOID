@@ -12,10 +12,10 @@ namespace SIGMOID.Projectiles
             Projectile.arrow = true;
             Projectile.width = 20;
             Projectile.height = 20;
-            Projectile.aiStyle = ProjAIStyleID.Bullet;
+            Projectile.aiStyle = 3;
             Projectile.friendly = true;
             Projectile.DamageType = DamageClass.Melee;
-            AIType = ProjectileID.bullet;
+            AIType = 182;
         }
 
         public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)

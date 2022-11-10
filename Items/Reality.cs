@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using SIGMOID.Projectiles;
 
 namespace SIGMOID.Items
 {
@@ -18,7 +19,7 @@ namespace SIGMOID.Items
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 1000;
 			Item.height = 1000;
-			Item.useTime = 1;
+			Item.useTime = 10;
 			Item.useAnimation = 1;
 			Item.useStyle = 1;
 			Item.knockBack = 0;
@@ -27,6 +28,7 @@ namespace SIGMOID.Items
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;
 			Item.shoot = ModContent.ProjectileType<Projectile1>();
+			Item.shootSpeed = 10;
 		}
 
 		public override void AddRecipes()
