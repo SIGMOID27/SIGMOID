@@ -5,30 +5,37 @@ using SIGMOID.Projectiles;
 
 namespace SIGMOID.Items
 {
-	public class Reality : ModItem
+	public class Destitution : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
 			// DisplayName.SetDefault("SIGMOID"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
-			Tooltip.SetDefault("Real");
+			Tooltip.SetDefault("Killing machine");
 		}
 
 		public override void SetDefaults()
 		{
-			Item.damage = 10000;
-			Item.DamageType = DamageClass.Melee;
-			Item.width = 1000;
-			Item.height = 1000;
-			Item.useTime = 10;
-			Item.useAnimation = 1;
-			Item.useStyle = 1;
-			Item.knockBack = 0;
-			Item.value = 10000000;
-			Item.rare = 5;
-			Item.UseSound = SoundID.Item1;
+
+
+            Item.shootSpeed = 12f;
+
+            Item.width = 28;
+            Item.height = 28;
+            Item.useStyle = ItemUseStyleID.Shoot;
+
+            Item.DamageType = DamageClass.Ranged;
+			Item.useStyle = 5;
+            Item.noMelee = true;
+            Item.damage = 200;
+            Item.knockBack = 3.2f;
 			Item.autoReuse = true;
-			Item.shoot = ModContent.ProjectileType<Projectile1>();
-			Item.shootSpeed = 10;
+			Item.rare = 5;
+
+            Item.useTime = 3;
+            Item.useAnimation = 3;
+
+            Item.UseSound = SoundID.Item71;
+			Item.shoot = ModContent.ProjectileType<DestitutionProj>();
 		}
 
 		public override void AddRecipes()
