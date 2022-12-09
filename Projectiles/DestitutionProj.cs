@@ -14,7 +14,7 @@ namespace SIGMOID.Projectiles
             Projectile.height = 20;
             Projectile.aiStyle = 3;
             Projectile.friendly = true;
-            Projectile.DamageType = DamageClass.Melee;
+            Projectile.DamageType = DamageClass.Ranged;
             AIType = 182;
         }
     }
